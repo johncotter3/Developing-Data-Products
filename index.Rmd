@@ -12,39 +12,48 @@ mode        : selfcontained # {standalone, draft}
 
 ## Information Page
 
-1. Edit YAML front matter
-2. Write using R Markdown
-3. Use an empty line followed by three dashes to separate slides!
+The vehicle fault app gives a visual display of vehicle faults found in an actual test fleet. The input data is a csv file of all vehicle faults in the test fleet. A Google Earth KML file can also be downloaded at the bottom to see a visual representation of the data on a map.  Changing the input date range will filter the faults displayed in the plots and recalculates the output data.
 
-``` {r setOptions, echo = F, results='hide',message=FALSE}
+``` {r setOptions, echo=FALSE, results='hide',message=FALSE}
 # Set up code for the rest of the presentation
 library(googleVis)
+library(shiny)
 op <- options(gvis.plot.tag = "chart")
-ARS327_FTA3_2_RG_Faults_140604_RawData <- read.csv("data/ARS327_FTA3_2_RG_Faults_140604_RawData.csv")
+ARS327_FTA3_2_RG_Faults_140604_RawData <- read.csv("FaultData/data/ARS327_FTA3_2_RG_Faults_140604_RawData.csv")
 faults <- ARS327_FTA3_2_RG_Faults_140604_RawData
 ```
 
 --- .class #id 
 
 ## Faults per Day
-``` {r CalendarChartPage, echo = F, results='asis', tidy=FALSE}
+Total Faults: 
+``` {r echo=FALSE,results='asis',tidy=TRUE} 
+nrow(faults) 
+```
+``` {r CalendarChartPage, echo=FALSE,message=FALSE,warning=FALSE, }
+suppressPackageStartupMessages(library(googleVis))
 calendarData <- as.data.frame(table(as.Date(faults[,"TIME_STAMP"],"%m/%d/%Y")))
 calendarData$Date <- as.POSIXct(calendarData$Var1)
-Cal <- gvisCalendar(calendarData, datevar="Date", numvar="Freq",
-    options=list(
-      title="Calendar Heat Map",
-      height=175
-    ),
-    chartid="Calendar"
-  )
+plot(gvisCalendar(calendarData, datevar="Date", numvar="Freq",
+        options=list(
+          title="Calendar Heat Map",
+          height=175
+        ),
+        chartid="Calendar"
+      )
+)
 #print(Cal, tag='chart')
 #cat(createGoogleGadget(Cal), file="CalChart.xml")
-plot(Cal)
+#plot(Cal)
 ```
 
 --- .class #id
 
 ## Total Faults
+
+<iframe src="https://johncotter.shinyapps.io/CalendarOnly/" width="100%" 
+height="100%" frameborder="0">Loading</iframe>
+
 
 --- .class #id
 

@@ -5,7 +5,7 @@ shinyUI(pageWithSidebar(
     p("This app gives a visual display of vehicle faults found in a test fleet.  The input data
       is a csv file of all vehicle faults in the test fleet.  A Google Earth KML file can also
       be downloaded at the bottom to see a visual representation of the data on a map"),
-    p("Change the date range to see a snapshot of the total data."),
+    p("Change the date range to filter the total data."),
     h3("Inputs"),
     h4(htmlOutput("dateRangeUI")),
     hr(),
