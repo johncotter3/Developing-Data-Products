@@ -12,9 +12,21 @@ mode        : selfcontained # {standalone, draft}
 
 ## Information Page
 
+
 The vehicle fault app gives a visual display of vehicle faults found in an actual test fleet. The input data is a csv file of all vehicle faults in the test fleet. A Google Earth KML file can also be downloaded at the bottom to see a visual representation of the data on a map.  Changing the input date range will filter the faults displayed in the plots and recalculates the output data.
 
+The total data includes:
 
+Faults: 
+
+```
+## [1] 1462
+```
+Vehicles:
+
+```
+## [1] 10
+```
 
 --- .class #id 
 
