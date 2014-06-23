@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vehicle Fault Data</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Vehicle Fault Data">
+  <meta name="author" content="John Cotter">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Vehicle Fault Data</h1>
+    <h2>Daimler</h2>
+    <p>John Cotter<br/>Senior Test Engineer</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Information Page</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>Edit YAML front matter</li>
+<li>Write using R Markdown</li>
+<li>Use an empty line followed by three dashes to separate slides!</li>
+</ol>
+
+<pre><code>## Warning: cannot open file
+## &#39;data/ARS327_FTA3_2_RG_Faults_140604_RawData.csv&#39;: No such file or
+## directory
+</code></pre>
+
+<pre><code>## Error: cannot open the connection
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Faults per Day</h2>
+  </hgroup>
+  <article data-timings="">
+    <!-- Calendar generated in R 3.1.0 by googleVis 0.5.2 package -->
+
+<!-- Sat Jun 21 20:19:09 2014 -->
+
+<!-- jsHeader -->
+
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataCalendar () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ new Date(2014,0,10,0,0,0),
+3 
+],
+[
+ new Date(2014,0,11,0,0,0),
+4 
+],
+[
+ new Date(2014,0,12,0,0,0),
+7 
+],
+[
+ new Date(2014,0,13,0,0,0),
+7 
+],
+[
+ new Date(2014,0,14,0,0,0),
+7 
+],
+[
+ new Date(2014,0,15,0,0,0),
+4 
+],
+[
+ new Date(2014,0,16,0,0,0),
+6 
+],
+[
+ new Date(2014,0,17,0,0,0),
+7 
+],
+[
+ new Date(2014,0,18,0,0,0),
+1 
+],
+[
+ new Date(2014,0,19,0,0,0),
+3 
+],
+[
+ new Date(2014,0,20,0,0,0),
+5 
+],
+[
+ new Date(2014,0,21,0,0,0),
+8 
+],
+[
+ new Date(2014,0,22,0,0,0),
+10 
+],
+[
+ new Date(2014,0,24,0,0,0),
+1 
+],
+[
+ new Date(2014,0,27,0,0,0),
+1 
+],
+[
+ new Date(2014,0,28,0,0,0),
+12 
+],
+[
+ new Date(2014,0,29,0,0,0),
+8 
+],
+[
+ new Date(2014,0,30,0,0,0),
+3 
+],
+[
+ new Date(2014,0,31,0,0,0),
+10 
+],
+[
+ new Date(2014,1,1,0,0,0),
+1 
+],
+[
+ new Date(2014,1,2,0,0,0),
+9 
+],
+[
+ new Date(2014,1,3,0,0,0),
+5 
+],
+[
+ new Date(2014,1,4,0,0,0),
+4 
+],
+[
+ new Date(2014,1,5,0,0,0),
+4 
+],
+[
+ new Date(2014,1,6,0,0,0),
+22 
+],
+[
+ new Date(2014,1,7,0,0,0),
+14 
+],
+[
+ new Date(2014,1,10,0,0,0),
+8 
+],
+[
+ new Date(2014,1,11,0,0,0),
+19 
+],
+[
+ new Date(2014,1,12,0,0,0),
+12 
+],
+[
+ new Date(2014,1,13,0,0,0),
+3 
+],
+[
+ new Date(2014,1,14,0,0,0),
+8 
+],
+[
+ new Date(2014,1,15,0,0,0),
+1 
+],
+[
+ new Date(2014,1,16,0,0,0),
+8 
+],
+[
+ new Date(2014,1,17,0,0,0),
+4 
+],
+[
+ new Date(2014,1,18,0,0,0),
+4 
+],
+[
+ new Date(2014,1,19,0,0,0),
+15 
+],
+[
+ new Date(2014,1,20,0,0,0),
+13 
+],
+[
+ new Date(2014,1,21,0,0,0),
+7 
+],
+[
+ new Date(2014,1,22,0,0,0),
+2 
+],
+[
+ new Date(2014,1,23,0,0,0),
+5 
+],
+[
+ new Date(2014,1,24,0,0,0),
+18 
+],
+[
+ new Date(2014,1,25,0,0,0),
+5 
+],
+[
+ new Date(2014,1,26,0,0,0),
+11 
+],
+[
+ new Date(2014,1,27,0,0,0),
+5 
+],
+[
+ new Date(2014,1,28,0,0,0),
+2 
+],
+[
+ new Date(2014,2,1,0,0,0),
+2 
+],
+[
+ new Date(2014,2,3,0,0,0),
+7 
+],
+[
+ new Date(2014,2,4,0,0,0),
+23 
+],
+[
+ new Date(2014,2,5,0,0,0),
+27 
+],
+[
+ new Date(2014,2,6,0,0,0),
+8 
+],
+[
+ new Date(2014,2,7,0,0,0),
+8 
+],
+[
+ new Date(2014,2,8,0,0,0),
+8 
+],
+[
+ new Date(2014,2,9,0,0,0),
+4 
+],
+[
+ new Date(2014,2,10,0,0,0),
+4 
+],
+[
+ new Date(2014,2,11,0,0,0),
+34 
+],
+[
+ new Date(2014,2,12,0,0,0),
+1 
+],
+[
+ new Date(2014,2,13,0,0,0),
+2 
+],
+[
+ new Date(2014,2,14,0,0,0),
+23 
+],
+[
+ new Date(2014,2,15,0,0,0),
+2 
+],
+[
+ new Date(2014,2,16,0,0,0),
+2 
+],
+[
+ new Date(2014,2,17,0,0,0),
+5 
+],
+[
+ new Date(2014,2,18,0,0,0),
+6 
+],
+[
+ new Date(2014,2,19,0,0,0),
+39 
+],
+[
+ new Date(2014,2,21,0,0,0),
+20 
+],
+[
+ new Date(2014,2,22,0,0,0),
+3 
+],
+[
+ new Date(2014,2,23,0,0,0),
+3 
+],
+[
+ new Date(2014,2,24,0,0,0),
+12 
+],
+[
+ new Date(2014,2,25,0,0,0),
+34 
+],
+[
+ new Date(2014,2,26,0,0,0),
+15 
+],
+[
+ new Date(2014,2,27,0,0,0),
+5 
+],
+[
+ new Date(2014,2,28,0,0,0),
+7 
+],
+[
+ new Date(2014,2,29,0,0,0),
+1 
+],
+[
+ new Date(2014,2,30,0,0,0),
+5 
+],
+[
+ new Date(2014,2,31,0,0,0),
+18 
+],
+[
+ new Date(2014,3,1,0,0,0),
+25 
+],
+[
+ new Date(2014,3,2,0,0,0),
+27 
+],
+[
+ new Date(2014,3,3,0,0,0),
+12 
+],
+[
+ new Date(2014,3,4,0,0,0),
+10 
+],
+[
+ new Date(2014,3,5,0,0,0),
+5 
+],
+[
+ new Date(2014,3,6,0,0,0),
+6 
+],
+[
+ new Date(2014,3,7,0,0,0),
+19 
+],
+[
+ new Date(2014,3,8,0,0,0),
+10 
+],
+[
+ new Date(2014,3,10,0,0,0),
+80 
+],
+[
+ new Date(2014,3,11,0,0,0),
+5 
+],
+[
+ new Date(2014,3,12,0,0,0),
+1 
+],
+[
+ new Date(2014,3,13,0,0,0),
+3 
+],
+[
+ new Date(2014,3,14,0,0,0),
+5 
+],
+[
+ new Date(2014,3,15,0,0,0),
+7 
+],
+[
+ new Date(2014,3,16,0,0,0),
+10 
+],
+[
+ new Date(2014,3,17,0,0,0),
+5 
+],
+[
+ new Date(2014,3,18,0,0,0),
+3 
+],
+[
+ new Date(2014,3,19,0,0,0),
+7 
+],
+[
+ new Date(2014,3,20,0,0,0),
+4 
+],
+[
+ new Date(2014,3,21,0,0,0),
+2 
+],
+[
+ new Date(2014,3,22,0,0,0),
+10 
+],
+[
+ new Date(2014,3,23,0,0,0),
+18 
+],
+[
+ new Date(2014,3,24,0,0,0),
+23 
+],
+[
+ new Date(2014,3,25,0,0,0),
+43 
+],
+[
+ new Date(2014,3,26,0,0,0),
+5 
+],
+[
+ new Date(2014,3,27,0,0,0),
+3 
+],
+[
+ new Date(2014,3,28,0,0,0),
+24 
+],
+[
+ new Date(2014,3,29,0,0,0),
+15 
+],
+[
+ new Date(2014,3,30,0,0,0),
+13 
+],
+[
+ new Date(2014,4,1,0,0,0),
+15 
+],
+[
+ new Date(2014,4,2,0,0,0),
+19 
+],
+[
+ new Date(2014,4,3,0,0,0),
+7 
+],
+[
+ new Date(2014,4,4,0,0,0),
+7 
+],
+[
+ new Date(2014,4,5,0,0,0),
+47 
+],
+[
+ new Date(2014,4,6,0,0,0),
+20 
+],
+[
+ new Date(2014,4,7,0,0,0),
+17 
+],
+[
+ new Date(2014,4,8,0,0,0),
+10 
+],
+[
+ new Date(2014,4,9,0,0,0),
+28 
+],
+[
+ new Date(2014,4,10,0,0,0),
+9 
+],
+[
+ new Date(2014,4,11,0,0,0),
+8 
+],
+[
+ new Date(2014,4,12,0,0,0),
+16 
+],
+[
+ new Date(2014,4,13,0,0,0),
+12 
+],
+[
+ new Date(2014,4,14,0,0,0),
+5 
+],
+[
+ new Date(2014,4,15,0,0,0),
+10 
+],
+[
+ new Date(2014,4,16,0,0,0),
+5 
+],
+[
+ new Date(2014,4,17,0,0,0),
+8 
+],
+[
+ new Date(2014,4,18,0,0,0),
+8 
+],
+[
+ new Date(2014,4,19,0,0,0),
+18 
+],
+[
+ new Date(2014,4,20,0,0,0),
+7 
+],
+[
+ new Date(2014,4,21,0,0,0),
+10 
+],
+[
+ new Date(2014,4,22,0,0,0),
+17 
+],
+[
+ new Date(2014,4,23,0,0,0),
+11 
+],
+[
+ new Date(2014,4,24,0,0,0),
+9 
+],
+[
+ new Date(2014,4,25,0,0,0),
+5 
+],
+[
+ new Date(2014,4,26,0,0,0),
+5 
+],
+[
+ new Date(2014,4,27,0,0,0),
+9 
+],
+[
+ new Date(2014,4,28,0,0,0),
+7 
+],
+[
+ new Date(2014,4,29,0,0,0),
+8 
+],
+[
+ new Date(2014,4,30,0,0,0),
+22 
+],
+[
+ new Date(2014,4,31,0,0,0),
+4 
+],
+[
+ new Date(2014,5,1,0,0,0),
+4 
+],
+[
+ new Date(2014,5,2,0,0,0),
+17 
+],
+[
+ new Date(2014,5,3,0,0,0),
+13 
+],
+[
+ new Date(2014,5,4,0,0,0),
+1 
+] 
+];
+data.addColumn('datetime','Date');
+data.addColumn('number','Freq');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartCalendar() {
+var data = gvisDataCalendar();
+var options = {};
+options["width"] =    600;
+options["height"] =    175;
+options["title"] = "Calendar Heat Map";
+
+    var chart = new google.visualization.Calendar(
+    document.getElementById('Calendar')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "calendar";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartCalendar);
+})();
+function displayChartCalendar() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+
+<!-- jsChart -->  
+
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartCalendar"></script>
+ 
+
+<!-- divChart -->
+
+<div id="Calendar"
+  style="width: 600px; height: 175px;">
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Total Faults</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Map of Faults</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Information Page'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Faults per Day'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Total Faults'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Map of Faults'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>

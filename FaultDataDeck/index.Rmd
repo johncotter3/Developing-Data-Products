@@ -1,0 +1,52 @@
+---
+title       : Vehicle Fault Data
+subtitle    : Daimler
+author      : John Cotter
+job         : Senior Test Engineer
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+---
+
+## Information Page
+
+1. Edit YAML front matter
+2. Write using R Markdown
+3. Use an empty line followed by three dashes to separate slides!
+
+``` {r setOptions, echo = F, results='hide',message=FALSE}
+# Set up code for the rest of the presentation
+library(googleVis)
+op <- options(gvis.plot.tag = "chart")
+ARS327_FTA3_2_RG_Faults_140604_RawData <- read.csv("data/ARS327_FTA3_2_RG_Faults_140604_RawData.csv")
+faults <- ARS327_FTA3_2_RG_Faults_140604_RawData
+```
+
+--- .class #id 
+
+## Faults per Day
+``` {r CalendarChartPage, echo = F, results='asis', tidy=FALSE}
+calendarData <- as.data.frame(table(as.Date(faults[,"TIME_STAMP"],"%m/%d/%Y")))
+calendarData$Date <- as.POSIXct(calendarData$Var1)
+Cal <- gvisCalendar(calendarData, datevar="Date", numvar="Freq",
+    options=list(
+      title="Calendar Heat Map",
+      height=175
+    ),
+    chartid="Calendar"
+  )
+#print(Cal, tag='chart')
+#cat(createGoogleGadget(Cal), file="CalChart.xml")
+plot(Cal)
+```
+
+--- .class #id
+
+## Total Faults
+
+--- .class #id
+
+## Map of Faults
+
