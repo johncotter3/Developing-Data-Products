@@ -11,9 +11,6 @@ mode        : selfcontained # {standalone, draft}
 ---
 
 ## Information Page
-
-The vehicle fault app gives a visual display of vehicle faults found in an actual test fleet. The input data is a csv file of all vehicle faults in the test fleet. A Google Earth KML file can also be downloaded at the bottom to see a visual representation of the data on a map.  Changing the input date range will filter the faults displayed in the plots and recalculates the output data.
-
 ``` {r setOptions, echo=FALSE, results='hide',message=FALSE}
 # Set up code for the rest of the presentation
 library(googleVis)
@@ -21,6 +18,19 @@ library(shiny)
 op <- options(gvis.plot.tag = "chart")
 ARS327_FTA3_2_RG_Faults_140604_RawData <- read.csv("FaultData/data/ARS327_FTA3_2_RG_Faults_140604_RawData.csv")
 faults <- ARS327_FTA3_2_RG_Faults_140604_RawData
+```
+
+The vehicle fault app gives a visual display of vehicle faults found in an actual test fleet. The input data is a csv file of all vehicle faults in the test fleet. A Google Earth KML file can also be downloaded at the bottom to see a visual representation of the data on a map.  Changing the input date range will filter the faults displayed in the plots and recalculates the output data.
+
+The total data includes:
+
+Faults: 
+```{r echo=FALSE} 
+nrow(faults)
+```
+Vehicles:
+```{r echo=FALSE}
+length(unique(faults$VIN_NO))
 ```
 
 --- .class #id 
